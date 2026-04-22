@@ -1,33 +1,67 @@
-#  Fruits & Vegetables Image Classification
+# 🖼️ Fruits & Vegetables Image Classification
 
-A Convolutional Neural Network (CNN) implemented in TensorFlow/Keras, designed to classify images of fruits and vegetables. The project demonstrates model architecture, training process, evaluation, and prediction on unseen data.
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat&logo=tensorflow&logoColor=white)
+![Keras](https://img.shields.io/badge/Keras-D00000?style=flat&logo=keras&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat&logo=jupyter&logoColor=white)
 
----
-
-##  Features & Highlights
-
-- **Clear Layered Architecture**: Sequential CNN with:
-  - Rescaling → Convolutional (16, 32, 64 filters) + ReLU + Max-Pooling
-  - Flatten layer → Dropout (20%) → Dense (128 units) → Output layer
-- **Robust Training Pipeline**:
-  - Optimizer: **Adam**
-  - Loss: **Sparse Categorical Crossentropy**
-  - Metrics: **Accuracy**
-  - Train–Val split strategy for early stopping insights
-- **Comprehensive Evaluation**:
-  - Visualizations of training vs. validation accuracy and loss
-  - Final model run on test set for real performance estimation
-- **User-friendly Prediction**:
-  - Load and predict on individual images with a simple function call
+A Convolutional Neural Network (CNN) built with TensorFlow and Keras to classify images of fruits and vegetables. The project covers the full deep learning pipeline from data preprocessing and model architecture to training, evaluation, and prediction on unseen images.
 
 ---
 
-##  Getting Started
+## 🧠 Model Architecture
 
-To run this project locally:
+Sequential CNN designed for multi-class image classification:
+
+| Layer | Details |
+|-------|---------|
+| Rescaling | Normalize pixel values to [0, 1] |
+| Conv2D + ReLU | 16 filters |
+| MaxPooling2D | Reduce spatial dimensions |
+| Conv2D + ReLU | 32 filters |
+| MaxPooling2D | Reduce spatial dimensions |
+| Conv2D + ReLU | 64 filters |
+| MaxPooling2D | Reduce spatial dimensions |
+| Flatten | Convert to 1D |
+| Dropout | 20% — prevent overfitting |
+| Dense | 128 units |
+| Output Layer | Softmax — multi-class classification |
+
+---
+
+## ⚙️ Training Configuration
+
+| Parameter | Value |
+|-----------|-------|
+| Optimizer | Adam |
+| Loss Function | Sparse Categorical Crossentropy |
+| Metric | Accuracy |
+| Strategy | Train/Validation split |
+
+---
+
+## 📊 Evaluation
+
+- Training vs validation accuracy and loss visualized across epochs
+- Final evaluation on unseen test data for real performance estimation
+- Iterative hyperparameter tuning to improve accuracy
+
+---
+
+## 🚀 Run Locally
 
 ```bash
-git clone https://github.com/01End/image-classification.git
+git clone https://github.com/vksox1404-web/image-classification.git
 cd image-classification
-# Use virtual env if preferred
 pip install -r requirements.txt
+```
+
+---
+
+## 👤 Author
+
+**Ali Mohamed** — CS Graduate | AI & ML Engineer | Qatar
+
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/vksox1404-web)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ali-mohamed-5777b2403)
+[![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21E?style=flat&logo=huggingface&logoColor=black)](https://huggingface.co/Vksox)

@@ -48,15 +48,6 @@ Sequential CNN designed for multi-class image classification:
 
 ---
 
-## 🚀 Run Locally
-
-```bash
-git clone https://github.com/vksox1404-web/image-classification.git
-cd image-classification
-pip install -r requirements.txt
-```
-
----
 
 ## 👤 Author
 
